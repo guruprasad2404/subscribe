@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            width: 200px;
+            height: 40px;
+            border: none;
+            color: white;
+            background-color: red;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px black;
+            letter-spacing: 5px;
+            font-weight: bolder;
+            font-size: 20px;
+            text-shadow: 2px 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="SUBSCRIBE">
+    <script>
+        document.addEventListener("click",function()
+        {
+            var inputTag=document.querySelector("input")
+            var inputTagValue=inputTag.value
+            if(inputTagValue=="SUBSCRIBE")
+            {
+                inputTag.setAttribute("value","SUBSCRIBED");
+                inputTag.style.backgroundColor="gray";
+            }
+            else{
+                inputTag.setAttribute("value","SUBSCRIBE")
+                inputTag.style.backgroundColor="red";
+            }
+        })
+        var inputTag=document.querySelector("input");
+        document.addEventListener("mousedown",function(){
+            document.querySelector("input").style.transform="scale(1.2)"
+            console.log("called")
+        })
+        document.addEventListener("mouseup",function()
+        {
+            document.querySelector("input").style.transform="scale(1)"
+        })
+    </script>
+</body>
+</html>
